@@ -1,0 +1,67 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "hc create apiClient",
+  "steps": [
+    {
+      "file": "frontend/src/api/index.ts",
+      "description": "用hc创建一个apiClient",
+      "line": 58
+    },
+    {
+      "file": "frontend/src/api/requests.ts",
+      "description": "client.{path}.{method},path是在后端定义的route",
+      "line": 4
+    },
+    {
+      "file": "backend/src/modules/me/routes.ts",
+      "description": " here is the method",
+      "line": 82
+    },
+    {
+      "file": "frontend/src/api/auth.ts",
+      "description": "传入的是{json:xx}",
+      "line": 21
+    },
+    {
+      "file": "backend/src/modules/auth/routes.ts",
+      "description": "验证是根据这里的schema来的",
+      "line": 26
+    },
+    {
+      "file": "backend/src/modules/auth/index.ts",
+      "description": "对传入的对象json属性做验证 验证是根据routes定义的schema来的",
+      "line": 53
+    },
+    {
+      "file": "backend/src/db/schema/users.ts",
+      "description": "只是验证它是一个独一无二的email",
+      "line": 20
+    },
+    {
+      "file": "backend/src/modules/auth/index.ts",
+      "description": "从请求post的body拿到json属性对象 并解构",
+      "line": 63
+    },
+    {
+      "file": "frontend/src/api/general.ts",
+      "description": "在这里检查token",
+      "line": 58
+    },
+    {
+      "file": "frontend/src/modules/auth/verify-email.tsx",
+      "description": "填写了邮箱和密码后要在邮箱收验证码",
+      "line": 51
+    },
+    {
+      "file": "frontend/src/modules/auth/index.tsx",
+      "description": "在登陆页面会根据step渲染不同的组件 做不同的请求",
+      "line": 68
+    },
+    {
+      "file": "frontend/src/modules/auth/sign-up-form.tsx",
+      "description": "会根据有没有token导航到不同的页面",
+      "line": 31
+    }
+  ],
+  "ref": "833181a99841e846eaad031c8b060ba59e69d437"
+}

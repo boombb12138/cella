@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "members interface query implement",
+  "steps": [
+    {
+      "file": "backend/src/modules/general/index.ts",
+      "description": "filter里面是过滤条件",
+      "line": 375
+    }
+  ],
+  "ref": "833181a99841e846eaad031c8b060ba59e69d437"
+}

@@ -12,6 +12,8 @@ export const idSchema = z.string();
 
 export const slugSchema = z.string();
 
+//  it checks if the value is a string and will pass the validation if it is, 
+//  regardless of whether it is considered an "id" or a "slug".
 export const idOrSlugSchema = idSchema.or(slugSchema);
 
 export const tokenSchema = z.object({

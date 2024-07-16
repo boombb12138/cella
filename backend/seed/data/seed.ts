@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 import { db } from '../../src/db/db';
+import {db as electricDB } from '../../src/db/db.electric';
 import { nanoid } from '../../src/lib/nanoid';
 
 import { UniqueEnforcer } from 'enforce-unique';
@@ -211,7 +212,8 @@ export const dataSeed = async (progressCallback?: (stage: string, count: number,
         tasksCount += insertTasks.length;
         if (progressCallback) progressCallback('tasks', tasksCount, 'inserting');
 
-        await db.insert(tasksTable).values(insertTasks).onConflictDoNothing();
+        // await db.insert(tasksTable).values(insertTasks).onConflictDoNothing();
+        await electricDB.insert(tasksTable).values(insertTasks).onConflictDoNothing();
 
         const insertLabels: InsertLabelModel[] = Array.from({ length: 5 }).map(() => {
           const name = organizationsUniqueEnforcer.enforce(() => faker.company.name());
@@ -230,7 +232,8 @@ export const dataSeed = async (progressCallback?: (stage: string, count: number,
         labelsCount += insertLabels.length;
         if (progressCallback) progressCallback('labels', labelsCount, 'inserting');
 
-        await db.insert(labelsTable).values(insertLabels).onConflictDoNothing();
+        // await db.insert(labelsTable).values(insertLabels).onConflictDoNothing();
+        await electricDB.insert(labelsTable).values(insertLabels).onConflictDoNothing();
       }
     }
   }

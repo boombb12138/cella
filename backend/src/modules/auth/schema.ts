@@ -9,5 +9,5 @@ export const authBodySchema = z.object({
 });
 
 export const emailBodySchema = z.object({
-  email: userSchema.shape.email,
+  email: userSchema.shape.email,//TODO shape?
 });

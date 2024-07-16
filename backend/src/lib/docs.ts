@@ -43,6 +43,7 @@ const docs = (app: CustomHono) => {
 
   app.doc31('/openapi.json', {
     servers: [{ url: config.backendUrl }],
+    // servers: [{ url: config.electricUrl }],
     info: {
       title: `${config.name} API`,
       version: 'v1',
